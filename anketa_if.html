@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>anketa_if</title>
+    <script>
+        const name = prompt("Ваше имя?", "");
+        const surname = prompt("Ваша фамилия?", "");
+        const patron = prompt("Ваше отчество?", "");
+        const age = +prompt("Ваш возраст?", "");
+        const ageDate = age * 365;
+        const age5 = age + 5;
+        let gender = confirm("Ваш пол - мужской?");
+        if (gender == true)  {
+            gender = "Пол: мужской";
+        } else {
+            gender = "Пол: женский";
+        }
+        if (gender == true && age >= 60 || gender != true && age >= 60) {
+            pensAge = "да";
+        } else {
+            pensAge = "нет";
+        }
+        alert('ФИО: ' + name + ' ' + surname + ' ' + patron + '\n' + 'Возраст, лет: ' + age + '\n' + 'Возраст, дней: ' + ageDate + '\n' + 'Возраст через 5 лет: ' + age5 + '\n' + gender + '\n' + 'Пенсионный возраст: ' + pensAge);
+    </script>
+  </head>
+  <body>
+    <p>Мой первый скрипт if</p>
+  </body>
+</html>
